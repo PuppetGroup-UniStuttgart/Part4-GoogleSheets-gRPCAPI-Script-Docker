@@ -1,5 +1,5 @@
 
-   localhost:
+   grpc:
       container_name: localhost
       build: .
       expose:
@@ -8,4 +8,4 @@
    script:
       build: ../script/
       links:
-         - localhost
+         - grpc

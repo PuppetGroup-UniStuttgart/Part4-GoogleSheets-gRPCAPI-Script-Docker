@@ -1,0 +1,12 @@
+version: '2'
+services:
+   localhost:
+      container_name: localhost
+      build: .
+      expose:
+         - "50054"
+
+   script:
+      build: ../script/
+      links:
+         - localhost

@@ -9,3 +9,5 @@
       build: ../script/
       links:
          - localhost
+      volumes_from:
+         - localhost

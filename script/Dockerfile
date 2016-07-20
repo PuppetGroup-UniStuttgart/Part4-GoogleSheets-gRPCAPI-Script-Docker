@@ -1,8 +1,8 @@
 FROM maven:3.3-jdk-8
 
 # Get sources
-RUN git clone --recursive https://github.com/shruthikuki/UniStuttgart-PuppetGroup-gRPCGoogleSheets.git
-WORKDIR /UniStuttgart-PuppetGroup-gRPCGoogleSheets
+RUN git clone --recursive https://github.com/shruthikuki/UniStuttgart-PuppetGroup-gRPC-DeploymentScripts.git
+WORKDIR /UniStuttgart-PuppetGroup-gRPC-DeploymentScripts
 
 # Run maven
 RUN mvn clean package
@@ -12,4 +12,4 @@ COPY config.properties /
 
 WORKDIR /
 
-CMD sleep 5s; java -cp /UniStuttgart-PuppetGroup-gRPCGoogleSheets/target/gRPCGoogleSheets-0.0.1-SNAPSHOT-jar-with-dependencies.jar cloudlab.ops.GoogleSheetsClient
+CMD sleep 5s; java -cp /UniStuttgart-PuppetGroup-gRPC-DeploymentScripts/target/DeploymentScript-0.0.1-SNAPSHOT-jar-with-dependencies.jar cloudlab.ops.GoogleSheetsClient
